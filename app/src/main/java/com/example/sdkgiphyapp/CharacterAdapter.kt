@@ -37,7 +37,7 @@ class CharacterAdapter(val character: List<Character>):RecyclerView.Adapter<Char
             val finalPath = "${character.thumbnail.path}/portrait_small.${character.thumbnail.extension}"
             val binding = CharacterBinding.bind(view)
             view.tvCharacterName.text = character.name
-            Picasso.get().load("${character.thumbnail.path}/standard_small.${character.thumbnail.extension}").into(binding.ivCharacter)
+            Picasso.get().load("${character.thumbnail.path}/portrait_medium.${character.thumbnail.extension}").into(binding.ivCharacter)
 
             //para mostrar algo cuando haces click en cada superheroe
             view.setOnClickListener {
